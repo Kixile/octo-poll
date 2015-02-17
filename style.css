@@ -1,10 +1,10 @@
-#static {
+#static_contact {
+	text-align:center;
+}
+#static_about {
 	text-align:center;
 }
 #footer {
 	position: absolute;
 	bottom: 0;
-}
-img {
-    margin:0px auto;
 }

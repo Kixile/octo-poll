@@ -1,8 +1,8 @@
 <div id="menubar">   
 	<nav>
-	  <a href="/octo-poll/">Home</a> |
-	  <a href="/octo-poll/">Polls</a> |
-	  <a href="/octo-poll/">Contact</a> |
-	  <a href="/octo-poll/">About</a>
+	  <a href="/">Home</a> |
+	  <a href="/polls.php">Polls</a> |
+	  <a href="/contact.php">Contact</a> |
+	  <a href="/about.php">About</a>
 	</nav>
 </div>
