@@ -9,7 +9,7 @@
             echo "Option $x: <input type=\"text\" name=\"option$x\" title=\"Option$x\"><br>\n";
         }
         ?>
-        <input type="submit" value="Search">
+        <input type="submit" value="Generate">
     </form>
 
 </div>
