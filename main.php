@@ -1,7 +1,7 @@
 <div id="static">
     <br>
     <br>
-    <img style="margin:0px auto;display:block" src="icon/name.png" alt="Octopoll"/>
+    <img src="icon/name.png" alt="Octopoll"/>
     <br>
     <a href="https://github.com/Kixile/octo-poll">Visit our Git</a>
     <br>
