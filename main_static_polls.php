@@ -1,6 +1,6 @@
 <div id="static_table">
 	<br>
-	<form action="todo.php"> //search from datebase 
+	<form action="todo.php"> <!--search from datebase-->
 	<input type="text" name="search" value="Search">
 	<select name="search_type">
 	  <option value="Question">Question</option>
@@ -10,7 +10,7 @@
 	<input type="submit" value="Search">
 	</form>
 	<br>
-	<table> //TODO pull data from database
+	<table> <!--TODO pull data from database-->
 		<tr>
 			<th>Question</th>
 			<th>Author</th> 
