@@ -1,7 +1,7 @@
 <div id="static_table">
 	<br>
 	<form action="todo.php"> <!--search from datebase-->
-	<input type="text" name="search" value="Search">
+	<input type="text" name="search" placeholder="Search">
 	<select name="search_type">
 	  <option value="Question">Question</option>
 	  <option value="Author">Author</option>
