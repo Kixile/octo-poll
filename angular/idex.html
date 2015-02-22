@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="octo-poll">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <section class="panel" ng-controller="PanelController as panel">
+            <ul class="nav">
+                <li ng-class="{ active: panel.isSet(1) }">
+                    <a href ng-click="panel.setTab(1)">Home</a></li>
+                <li ng-class="{ active: panel.isSet(2) }">
+                    <a href ng-click="panel.setTab(2)">Polls</a></li>
+                <li ng-class="{ active: panel.isSet(3) }">
+                    <a href ng-click="panel.setTab(3)">Contact</a></li>
+                <li ng-class="{ active: panel.isSet(4) }">
+                    <a href ng-click="panel.setTab(4)">About</a></li>
+            </ul>
+            <div ng-show="panel.isSet(1)">
+            </div>
+            <div ng-show="panel.isSet(2)">
+            </div>
+            <div ng-show="panel.isSet(3)">
+            </div>
+            <div ng-show="panel.isSet(4)">
+            </div>
+        </section>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
