@@ -1,15 +1,15 @@
-ul {
+.nav-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-li {
+.nav-menu-element {
     float: left;
     padding-left: 1%;
 }
-#static_contact {
+.static-contact {
     text-align:center;
 }
-#static_about {
+.static-about {
     text-align:center;
 }

@@ -5,21 +5,32 @@
     </head>
     <body>
         <section class="panel" ng-controller="PanelController as panel">
-            <ul class="nav">
-                <li ng-class="{ active: panel.isSet(1) }">
+            <ul class="nav-menu">
+                <li class="nav-menu-element" ng-class="{ active: panel.isSet(1) }">
                     <a href ng-click="panel.setTab(1)">Home</a></li>
-                <li ng-class="{ active: panel.isSet(2) }">
+                <li class="nav-menu-element" ng-class="{ active: panel.isSet(2) }">
                     <a href ng-click="panel.setTab(2)">Polls</a></li>
-                <li ng-class="{ active: panel.isSet(3) }">
+                <li class="nav-menu-element" ng-class="{ active: panel.isSet(3) }">
                     <a href ng-click="panel.setTab(3)">Contact</a></li>
-                <li ng-class="{ active: panel.isSet(4) }">
+                <li class="nav-menu-element" ng-class="{ active: panel.isSet(4) }">
                     <a href ng-click="panel.setTab(4)">About</a></li>
             </ul>
             <div ng-show="panel.isSet(1)">
             </div>
-            <div ng-show="panel.isSet(2)">
+            <div ng-show="panel.isSet(2)" ng-controller="PollsController as Polls">
+                <br>
+                There are {{Polls.polls.length}} active polls. These are:
+                <input type="search" ng-model="q" placeholder="search"/>
+                <ul class="polls-container">
+                    <li class="polls-repeat" ng-repeat="poll in Polls.polls | filter:q as results">
+                        [{{$index + 1}}] {{poll.question}}  {{poll.author}} {{poll.date | date}}
+                    </li>
+                    <li class="animate-repeat" ng-if="results.length == 0">
+                        No results found.
+                    </li>
+                </ul>
             </div>
-            <div id="static_contact" ng-show="panel.isSet(3)">
+            <div class="static-contact" ng-show="panel.isSet(3)">
                 <br>
                 <br>
                 <img style="margin:0 auto;display:block" src="../icon/name.png" alt="Octopoll"/>
@@ -31,7 +42,7 @@
                 <p>Innar Hallik</p>
                 <p>Jarmo-Hendrik Hints</p>
             </div>
-            <div id="static_about" ng-show="panel.isSet(4)">
+            <div class="static-about" ng-show="panel.isSet(4)">
                 <br>
                 <br>
                 <img style="margin:0 auto;display:block" src="../icon/name.png" alt="Octopoll"/>
