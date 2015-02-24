@@ -16,6 +16,25 @@
                     <a href ng-click="panel.setTab(4)">About</a></li>
             </ul>
             <div ng-show="panel.isSet(1)">
+                <!--  Poll Add Form -->
+                <form name="reviewForm" ng-controller="PollsAddController as poll_test"  ng-submit="poll_test.addPoll(pollForm)">
+                    <br>
+                    <fieldset class="form-group">
+                        <select ng-model="pollForm.type" class="form-control" ng-options="stars for stars in [1,2,3]" title="Type">
+                            <option value="">Type</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <textarea ng-model="pollForm.question" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input ng-model="pollForm.author" type="email" class="form-control" placeholder="author" title="author" />
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="submit" class="btn btn-primary pull-right" value="Generate"/>
+                    </fieldset>
+                </form>
+
             </div>
             <div ng-show="panel.isSet(2)" ng-controller="PollsController as Polls">
                 <br>
@@ -49,7 +68,7 @@
                 <br>
                 <h2>You can read about our project</h2>
                 <a href="https://courses.cs.ut.ee/2015/vl/spring/Main/Projekt4">here</a>
-            </div
+            </div>
         </section>
         <script type="text/javascript" src="angular.min.js"></script>
         <script type="text/javascript" src="app.js"></script>

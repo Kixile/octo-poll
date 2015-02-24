@@ -16,6 +16,16 @@
         };
     });
 
+    app.controller('PollsAddController', function() {
+        this.pollAdd = {};
+
+        this.addPoll = function(pollAdd) {
+            pollAdd.date = Date.now();
+            polls.push(pollAdd);
+            pollAdd={};
+        };
+    });
+
     app.controller('PollsController', function(){
         this.polls = polls;
     });
