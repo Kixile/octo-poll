@@ -16,16 +16,15 @@
         };
     });
 
-    app.controller('PollsAddController', function() {
-        this.pollAdd = {};
-
-        this.addPoll = function(pollAdd) {
-            pollAdd.date = Date.now();
-            polls.push(pollAdd);
-            pollAdd={};
+	app.controller('PollsAddController', function() {
+		this.poll;
+        this.addPoll = function() {
+            this.poll.date = Date.now();
+            polls.push(this.poll);
+            this.poll={};
         };
     });
-
+	
     app.controller('PollsController', function(){
         this.polls = polls;
     });
@@ -57,4 +56,3 @@
         }
     ];
 })();
-
