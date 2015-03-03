@@ -16,10 +16,29 @@
         };
     });
 
+    app.controller('ShowController', function(){
+        this.showPoll = {};
+        this.active = false;
+
+        this.setPoll = function(newValue){
+            this.showPoll = newValue;
+            this.active = true;
+        };
+
+        this.clear = function(){
+            this.active = false;
+        };
+
+        this.isSet = function(){
+            return this.active === true;
+        };
+    });
+
 	app.controller('PollsAddController', function() {
 		this.poll;
         this.addPoll = function() {
             this.poll.date = Date.now();
+            this.poll.id = 5;
             polls.push(this.poll);
             this.poll={};
         };
@@ -34,25 +53,25 @@
             question: 'How do we get end-users?',
             author: 'admin',
             description: 'What are your suggestions on this topic.',
-            type: 1,
             date: 1288323623006,
-            options: []
+            options: [],
+            id: 0
         },
         {
             question: 'How we become popular?',
             author: 'admin',
             description: 'Pick strategy what will help us the most.',
-            type: 2,
             date: 1288323623006,
-            options: ["adds","spam mail","find sponsors"]
+            options: ["adds","spam mail","find sponsors"],
+            id: 1
         },
         {
             question: 'What other poll creation tools you use?',
             author: 'admin',
             description: 'Select one or more options that you use.',
-            type: 3,
             date: 1288323623006,
-            options: ['poll-maker','asypolls','pollcode','strawpoll','surveymonkey']
+            options: ['poll-maker','asypolls','pollcode','strawpoll','surveymonkey'],
+            id: 3
         }
     ];
 })();
