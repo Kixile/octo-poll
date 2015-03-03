@@ -77,6 +77,13 @@
                         <div ng-show="show.isSet()">
                             {{show}}
                             <br>
+                            <h4>{{show.showPoll.question}}</h4>
+                            <h6>{{show.showPoll.description}}</h6>
+
+                            <label class="options" ng-repeat="option in show.showPoll.options">
+                                <input type="{{show.optionsType()}}" name="options" ng-model="show.answer.test"> {{option}}<br>
+                            </label>
+                            <br>
                             <button type="button" data-ng-click="show.clear()">close</button>
                         </div>
                 </section>

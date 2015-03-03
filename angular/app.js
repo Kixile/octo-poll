@@ -30,7 +30,16 @@
         };
 
         this.isSet = function(){
-            return this.active === true;
+            return this.active;
+        };
+
+        this.optionsType = function(){
+            if (this.showPoll.multi){
+                return "checkbox";
+            }else{
+                return "radio";
+            }
+
         };
     });
 
@@ -55,6 +64,8 @@
             description: 'What are your suggestions on this topic.',
             date: 1288323623006,
             options: [],
+            multi:false,
+            users:true,
             id: 0
         },
         {
@@ -63,6 +74,8 @@
             description: 'Pick strategy what will help us the most.',
             date: 1288323623006,
             options: ["adds","spam mail","find sponsors"],
+            multi:false,
+            users:true,
             id: 1
         },
         {
@@ -71,6 +84,8 @@
             description: 'Select one or more options that you use.',
             date: 1288323623006,
             options: ['poll-maker','asypolls','pollcode','strawpoll','surveymonkey'],
+            multi:true,
+            users:true,
             id: 3
         }
     ];
