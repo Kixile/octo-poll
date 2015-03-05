@@ -18,15 +18,18 @@
 
     app.controller('ShowController', function(){
         this.showPoll = {};
+        this.answers = {};
         this.active = false;
 
         this.setPoll = function(newValue){
             this.showPoll = newValue;
+            this.answers = {};
             this.active = true;
         };
 
         this.clear = function(){
             this.active = false;
+            this.answers = {};
         };
 
         this.isSet = function(){
@@ -74,8 +77,8 @@
             description: 'Pick strategy what will help us the most.',
             date: 1288323623006,
             options: ["adds","spam mail","find sponsors"],
-            multi:false,
-            users:true,
+            multi:true,
+            users:false,
             id: 1
         },
         {
@@ -84,7 +87,7 @@
             description: 'Select one or more options that you use.',
             date: 1288323623006,
             options: ['poll-maker','asypolls','pollcode','strawpoll','surveymonkey'],
-            multi:true,
+            multi:false,
             users:true,
             id: 3
         }
