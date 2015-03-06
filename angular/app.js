@@ -48,10 +48,26 @@
 
 	app.controller('PollsAddController', function() {
 		this.poll;
+        this.poll_clean = {};
+
         this.addPoll = function() {
-            this.poll.date = Date.now();
-            this.poll.id = 5;
-            polls.push(this.poll);
+            this.poll_clean.question = this.poll.question;
+            this.poll_clean.author = this.poll.author;
+            this.poll_clean.description = "Just a static at the moment.";
+            this.poll_clean.date = Date.now();
+            this.poll_clean.id = polls.length;
+            this.poll_clean.multi = this.poll.multi;
+            this.poll_clean.users = this.poll.users;
+
+            var raw_options = [this.poll.a1,this.poll.a2,this.poll.a3,this.poll.a4,this.poll.a5,this.poll.a6,this.poll.a7,this.poll.a8];
+            var clean = new Array();
+            for(var i = 0; i<8; i++){
+                if (raw_options[i]){
+                    clean.push(raw_options[i]);
+                }
+            }
+            this.poll_clean.options = clean;
+            polls.push(this.poll_clean);
             this.poll={};
         };
     });

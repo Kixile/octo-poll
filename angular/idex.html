@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="octo-poll">
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
@@ -20,7 +21,7 @@
                 <form name="reviewForm" ng-controller="PollsAddController as poll_test"  ng-submit="poll_test.addPoll()">
                     <br>
                     <fieldset class="form-group">
-                        Question: <textarea ng-model="poll_test.poll.question" class="form-control" placeholder="Write a short review of the product..." title="Question" required></textarea>
+                        Question: <textarea ng-model="poll_test.poll.question" class="form-control" placeholder="Enter your question here..." title="Question" required></textarea>
                     </fieldset>
                     <fieldset class="form-group">
                         Email: <input ng-model="poll_test.poll.author" type="email" class="form-control" placeholder="author@octo-poll.com" title="Email" required />
