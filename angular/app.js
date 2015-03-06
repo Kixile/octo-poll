@@ -61,9 +61,15 @@
 
             var raw_options = [this.poll.a1,this.poll.a2,this.poll.a3,this.poll.a4,this.poll.a5,this.poll.a6,this.poll.a7,this.poll.a8];
             var clean = new Array();
+            var seen = {};
+            var j = 0;
             for(var i = 0; i<8; i++){
                 if (raw_options[i]){
-                    clean.push(raw_options[i]);
+                    var item = raw_options[i];
+                    if(seen[item] !== 1) {
+                        seen[item] = 1;
+                        clean[j++] = item;
+                    }
                 }
             }
             this.poll_clean.options = clean;
