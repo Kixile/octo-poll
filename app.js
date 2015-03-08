@@ -77,7 +77,7 @@
             this.poll={};
         };
     });
-	
+
     app.controller('PollsController', function(){
         this.polls = polls;
     });

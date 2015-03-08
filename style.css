@@ -1,10 +1,15 @@
-#static_contact {
-	text-align:center;
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-#static_about {
-	text-align:center;
+.nav-menu-element {
+    float: left;
+    padding-left: 1%;
 }
-#footer {
-	position: absolute;
-	bottom: 0;
+.static-contact {
+    text-align:center;
+}
+.static-about {
+    text-align:center;
 }

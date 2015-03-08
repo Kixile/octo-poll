@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap-theme.min.css">
     </head>
     <body>
         <section class="panel" ng-controller="PanelController as panel">
@@ -57,7 +58,7 @@
                         <input ng-model="poll_test.poll.users" type="checkbox" class="form-control" title="Enable user to answer with their own options." />Enable other options.
                     </fieldset>
                     <fieldset class="form-group">
-                        <input type="submit" class="btn btn-primary pull-right" value="Generate"/>
+                        <input type="submit" class="qenerate button" value="Generate"/>
                     </fieldset>
                 </form>
             </div>
@@ -82,10 +83,10 @@
                             <h6>{{show.showPoll.description}}</h6>
                             <label class="options">
                                 <div class="pre-determand-options" ng-repeat="option in show.showPoll.options">
-                                    <input type="{{show.optionsType()}}" name="options" ng-model="show.answers[$index]"> {{option}} <br>
+                                    <input type="{{show.optionsType()}}" name="options" ng-model="show.answers[$index]" value="{{option}}" > {{option}} <br>
                                 </div>
                                 <div class="user-own-option" ng-show="show.showPoll.users">
-                                    <input type="{{show.optionsType()}}" name="options" ng-model="show.answer.otherSelected">
+                                    <input type="{{show.optionsType()}}" name="options" ng-model="show.answers[$show.showPoll.options.length]">
                                     Other:  <input type="text" ng-model="show.answer.other"><br>
                                 </div>
                             </label>
@@ -97,7 +98,7 @@
             <div class="static-contact" ng-show="panel.isSet(3)">
                 <br>
                 <br>
-                <img style="margin:0 auto;display:block" src="../icon/name.png" alt="Octopoll"/>
+                <img style="margin:0 auto;display:block" src="icon/name.png" alt="Octopoll"/>
                 <br>
                 <a href="https://github.com/Kixile/octo-poll">Visit our Git</a>
                 <br>
@@ -109,7 +110,7 @@
             <div class="static-about" ng-show="panel.isSet(4)">
                 <br>
                 <br>
-                <img style="margin:0 auto;display:block" src="../icon/name.png" alt="Octopoll"/>
+                <img style="margin:0 auto;display:block" src="icon/name.png" alt="Octopoll"/>
                 <br>
                 <h2>You can read about our project</h2>
                 <a href="https://courses.cs.ut.ee/2015/vl/spring/Main/Projekt4">here</a>
