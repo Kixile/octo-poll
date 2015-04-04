@@ -1,0 +1,45 @@
+<div>
+                <!--  Poll Add Form -->
+                <form name="reviewForm" ng-controller="PollsAddController as poll_test"  ng-submit="poll_test.addPoll()">
+                    <br>
+                    <fieldset class="form-group">
+                        Question: <textarea ng-model="poll_test.poll.question" class="form-control" placeholder="Enter your question here..." title="Question" required></textarea>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        Email: <input ng-model="poll_test.poll.author" type="email" class="form-control" placeholder="author@octo-poll.com" title="Email" required />
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A1: <input ng-model="poll_test.poll.a1" type="text" class="form-control" placeholder="Answer number 1" title="Option 1."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A2: <input ng-model="poll_test.poll.a2" type="text" class="form-control" placeholder="Answer number 2" title="Option 2."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A3: <input ng-model="poll_test.poll.a3" type="text" class="form-control" placeholder="Answer number 3" title="Option 3."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A4: <input ng-model="poll_test.poll.a4" type="text" class="form-control" placeholder="Answer number 4" title="Option 4."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A5: <input ng-model="poll_test.poll.a5" type="text" class="form-control" placeholder="Answer number 5" title="Option 5."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A6: <input ng-model="poll_test.poll.a6" type="text" class="form-control" placeholder="Answer number 6" title="Option 6."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A7: <input ng-model="poll_test.poll.a7" type="text" class="form-control" placeholder="Answer number 7" title="Option 7."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        A8: <input ng-model="poll_test.poll.a8" type="text" class="form-control" placeholder="Answer number 8" title="Option 8."/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input ng-model="poll_test.poll.multi" type="checkbox" class="form-control" title="Enable mutable options."/>Enable mutable options.
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input ng-model="poll_test.poll.users" type="checkbox" class="form-control" title="Enable user to answer with their own options." />Enable other options.
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="submit" class="qenerate button" value="Generate"/>
+                    </fieldset>
+                </form>
+            </div>
