@@ -1,33 +1,11 @@
 <div>
 <br>
-<section class="panel" ng-controller="ShowController as show">
-There are {{Polls.polls.length}} active polls. These are:
-<input type="search" ng-model="q" placeholder="search"/>
-<ul class="polls-container">
-<li class="polls-repeat" ng-repeat="poll in Polls.polls | filter:q as results">
-[{{$index + 1}}] {{poll.question}} {{poll.author}} {{poll.date | date}}
-<button type="button" data-ng-click="show.setPoll(poll)">{{$index}}</button>
-</li>
-<li class="animate-repeat" ng-if="results.length == 0">
-No results found.
-</li>
-</ul>
-<div ng-show="show.isSet()">
-{{show}}
-<br>
-<h4>{{show.showPoll.question}}</h4>
-<h6>{{show.showPoll.description}}</h6>
-<label class="options">
-<div class="pre-determand-options" ng-repeat="option in show.showPoll.options">
-<input type="{{show.optionsType()}}" name="options" ng-model="show.answers[$index]" value="{{option}}" > {{option}} <br>
-</div>
-<div class="user-own-option" ng-show="show.showPoll.users">
-<input type="{{show.optionsType()}}" name="options" ng-model="show.answers[$show.showPoll.options.length]">
-Other: <input type="text" ng-model="show.answer.other"><br>
-</div>
-</label>
-<br>
-<button type="button" data-ng-click="show.clear()">close</button>
-</div>
+
+<section class="panel" ng-controller="pollsJsonCtrl">
+	  <ul>
+		<li ng-repeat="poll in pollsJson.polls">
+		  {{poll.question}} - <em>{{poll.owner}}</em>
+		</li>
+	  </ul>
 </section>
 </div>

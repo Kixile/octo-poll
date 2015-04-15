@@ -62,36 +62,13 @@ app.controller('PollsCtrl', function($scope, $compile) {
 
 });
 
-app.controller('ShowController', function(){
-        this.showPoll = {};
-        this.answers = {};
-        this.active = false;
-
-        this.setPoll = function(newValue){
-            this.showPoll = newValue;
-            this.answers = {};
-            this.active = true;
-        };
-
-        this.clear = function(){
-            this.active = false;
-            this.answers = {};
-        };
-
-        this.isSet = function(){
-            return this.active;
-        };
-
-        this.optionsType = function(){
-            if (this.showPoll.multi){
-                return "checkbox";
-            }else{
-                return "radio";
-            }
-
-        };
-    });
-
+app.controller('pollsJsonCtrl', function($scope, $http) {
+  $http.get('https://octo-base.herokuapp.com/user_questions.php')
+       .then(function(res){
+          $scope.pollsJson = res.data;  
+  console.log('load json');		  
+        });
+});
 
 app.controller('PollsAddController', function() {
     this.poll;
