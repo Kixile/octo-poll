@@ -67,7 +67,7 @@ app.controller('PollsCtrl', function($scope, $compile) {
 });
 
 app.controller('pollsJsonCtrl', function($scope, $http) {
-	$http.get('https://octo-base.herokuapp.com/user_questions.php').then(function(res){
+	$http.get('https://octo-poll.herokuapp.com/user_questions.php').then(function(res){
 		$scope.pollsJson = res.data;  
 		console.log('load json');		  
         });
