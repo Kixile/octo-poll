@@ -66,8 +66,8 @@ app.controller('pollsJsonCtrl', ['$scope', 'polls', function($scope, polls) {
   });
 }]);
 
-app.controller('PollsAddCtlr', function($scope) {
-   var counter=2;
+app.controller('PollsAddCtlr', ['$scope', function($scope) {
+   var counter=0;
    $scope.allAnswers = [];
    $scope.addAnswer = function($event){
     
@@ -77,6 +77,6 @@ app.controller('PollsAddCtlr', function($scope) {
     console.log($scope.allAnswers)
     $event.preventDefault();
    }
-    });
+    }]);
 
 

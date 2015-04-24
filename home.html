@@ -17,12 +17,12 @@
                     </li>
                     <li ng-repeat="answer in allAnswers">
                     <fieldset class="form-group">
-                        <input ng-model="poll.a + {{answer.id}}" type="text" class="form-control" placeholder="'Answer' + id" title="Option answer.id}}"  style="display:inline">
+                        <input ng-model="poll.a + {{answer.id}}" type="text" class="form-control" placeholder="Answer {{answer.id}}" title="Option answer.id}}"  style="display:inline">
                     </fieldset>
 
                     </li>
                     <li>
-                    <a ng-click="addAnswer($event)">Add another answer</a>
+                    <button class="btn btn-default" ng-click="addAnswer($event)">Add another answer</button>
                 </li>
                     </ul>
                     <fieldset class="form-group">
