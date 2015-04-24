@@ -4,52 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2efe6ee51fa680083ccca20c53d4b434",
+    "hash": "82d04da84ca5f43ac61a307a584ab3fb",
     "packages": [
-        {
-            "name": "firebase/php-jwt",
-            "version": "1.0.0",
-            "target-dir": "Firebase/PHP-JWT",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "58c1e61d0dff797f2989c54415229f4016d57a6d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/58c1e61d0dff797f2989c54415229f4016d57a6d",
-                "reference": "58c1e61d0dff797f2989c54415229f4016d57a6d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "Authentication/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Neuman Vong",
-                    "email": "neuman+pear@twilio.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Anant Narayanan",
-                    "email": "anant@php.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-            "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2014-08-28 17:14:17"
-        },
         {
             "name": "slim/slim",
             "version": "2.6.2",
@@ -95,93 +51,12 @@
                 "router"
             ],
             "time": "2015-03-08 18:41:17"
-        },
-        {
-            "name": "sse/libsse",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/M1ke/libSSE-php.git",
-                "reference": "06e10f1cf584415d43d95ec9665e7fd86361b442"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/M1ke/libSSE-php/zipball/06e10f1cf584415d43d95ec9665e7fd86361b442",
-                "reference": "06e10f1cf584415d43d95ec9665e7fd86361b442",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "licson0729",
-                    "email": "licson0729@gmail.com"
-                }
-            ],
-            "time": "2015-01-20 10:45:36"
-        },
-        {
-            "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "31454f258f10329ae7c48763eb898a75c39e0a9f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/31454f258f10329ae7c48763eb898a75c39e0a9f",
-                "reference": "31454f258f10329ae7c48763eb898a75c39e0a9f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.4-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "lib/swift_required.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Corbyn"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.org",
-            "keywords": [
-                "mail",
-                "mailer"
-            ],
-            "time": "2015-03-14 06:06:39"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "sse/libsse": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
