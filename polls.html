@@ -3,11 +3,10 @@
 
 <section class="panel" ng-controller="pollsJsonCtrl">
 	  <ul>
-		<li ng-repeat="poll in pollsJson.polls">
+		<li ng-repeat="poll in allPolls">
 		  {{poll.question}} - <em>{{poll.owner}}</em>
 		</li>
 	  </ul>
 </section>
 </br>
 </div>
-<script type="text/javascript" src="polls.js"></script>

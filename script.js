@@ -63,7 +63,6 @@ app.controller('PollsCtrl', function($scope, $compile) {
 app.controller('pollsJsonCtrl', ['$scope', 'polls', function($scope, polls) {
   polls.success(function(data) {
       $scope.allPolls = data;
-      console.log(data)
   });
 }]);
 
