@@ -67,16 +67,14 @@ app.controller('pollsJsonCtrl', ['$scope', 'polls', function($scope, polls) {
 }]);
 
 app.controller('PollsAddCtlr', ['$scope', function($scope) {
-   var counter=0;
-   $scope.allAnswers = [];
-   $scope.addAnswer = function($event){
-    
-    counter++;
-    
+   var counter=2;
+   $scope.allAnswers = [{ id: '1' },{ id: '2' }];
+   $scope.addAnswer = function($event){    
+    counter++;    
     $scope.allAnswers.push({'id':counter});
     console.log($scope.allAnswers)
     $event.preventDefault();
    }
-    }]);
+}]);
 
 

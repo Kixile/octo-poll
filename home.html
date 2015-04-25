@@ -9,15 +9,9 @@
                         Email: <input ng-model="poll.author" type="email" class="form-control" placeholder="author@octo-poll.com" title="Email" required />
                     </fieldset>
                     <ul>
-                    <li><fieldset class="form-group">
-                        <input ng-model="poll.a1" type="text" class="form-control" placeholder="Answer 1" title="Option 1." style="display:inline" required/>
-                    </li>
-                    <li> <fieldset class="form-group">
-                        <input ng-model="poll.a2" type="text" class="form-control" placeholder="Answer 2" title="Option 2." style="display:inline" required/>
-                    </li>
                     <li ng-repeat="answer in allAnswers">
                     <fieldset class="form-group">
-                        <input ng-model="poll.a + {{answer.id}}" type="text" class="form-control" placeholder="Answer {{answer.id}}" title="Option answer.id}}"  style="display:inline">
+                        <input ng-model="answer.answer" type="text" class="form-control" placeholder="Answer {{answer.id}}" title="Option answer.id}}"  style="display:inline">
                     </fieldset>
 
                     </li>
