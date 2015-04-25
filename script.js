@@ -72,9 +72,16 @@ app.controller('PollsAddCtlr', ['$scope', function($scope) {
    $scope.addAnswer = function($event){    
     counter++;    
     $scope.allAnswers.push({'id':counter});
-    console.log($scope.allAnswers)
     $event.preventDefault();
    }
+   $scope.clear = function($event){
+    var a = $scope.poll;
+    a = angular.toJson(a)
+    var b = angular.toJson($scope.allAnswers)
+    var c = a+b
+    console.log(c)
+   }
+   
 }]);
 
 

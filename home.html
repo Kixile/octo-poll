@@ -1,9 +1,9 @@
-<div>
+<div ng-controller="PollsAddCtlr">
                 <!--  Poll Add Form -->
-                <form name="reviewForm" ng-controller="PollsAddCtlr"  ng-submit="clear()">
+                <form name="reviewForm" ng-submit="clear($event)">
                     <br>
                     <fieldset class="form-group">
-                        Question: <textarea ng-model="question" class="form-control" placeholder="Enter your question here..." title="Question" required></textarea>
+                        Question: <textarea ng-model="poll.question" class="form-control" placeholder="Enter your question here..." title="Question" required></textarea>
                     </fieldset>
                     <fieldset class="form-group">
                         Email: <input ng-model="poll.author" type="email" class="form-control" placeholder="author@octo-poll.com" title="Email" required />
@@ -11,7 +11,7 @@
                     <ul>
                     <li ng-repeat="answer in allAnswers">
                     <fieldset class="form-group">
-                        <input ng-model="poll.answer" type="text" class="form-control" placeholder="Answer {{answer.id}}" title="Option {{answer.id}}"  style="display:inline">
+                        <input ng-model="answer.value" type="text" class="form-control" placeholder="Answer {{answer.id}}" title="Option {{answer.id}}"  style="display:inline" ng-keypress="keypressHandler($event,{{answer.id}})">
                     </fieldset>
 
                     </li>
@@ -19,11 +19,14 @@
                     <button class="btn btn-default" ng-click="addAnswer($event)">Add another answer</button>
                 </li>
                     </ul>
+                   
+
+                        
                     <fieldset class="form-group">
-                        <input ng-model="poll.users" type="checkbox" class="form-control" title="Enable user to answer with their own options." />Enable other options.
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <input type="submit" class="qenerate button" value="Generate"/>
+                        <input ng-click="send($event)" type="submit" class="btn btn-default" value="Generate"/>
                     </fieldset>
                 </form>
+                <pre>form == {{ poll | json }}</pre>
+                <pre>a == {{ allAnswers | json }}</pre>
+        
             </div>
