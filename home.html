@@ -1,6 +1,6 @@
 <div ng-controller="PollsAddCtlr">
                 <!--  Poll Add Form -->
-                <form name="reviewForm" ng-submit="clear($event)">
+                <form name="reviewForm">
                     <br>
                     <fieldset class="form-group">
                         Question: <textarea ng-model="poll.question" class="form-control" placeholder="Enter your question here..." title="Question" required></textarea>
@@ -23,7 +23,7 @@
 
                         
                     <fieldset class="form-group">
-                        <input ng-click="send($event)" type="submit" class="btn btn-default" value="Generate"/>
+                        <input ng-click="send($event)" class="btn btn-default" value="Generate"/>
                     </fieldset>
                 </form>
                 <pre>form == {{ poll | json }}</pre>

@@ -66,7 +66,7 @@ app.controller('pollsJsonCtrl', ['$scope', 'polls', function($scope, polls) {
   });
 }]);
 
-app.controller('PollsAddCtlr', ['$scope', function($scope) {
+app.controller('PollsAddCtlr', ['$scope', '$http', function($scope,$http) {
    var counter=2;
    $scope.allAnswers = [{ id: '1' },{ id: '2' }];
 
@@ -77,12 +77,24 @@ app.controller('PollsAddCtlr', ['$scope', function($scope) {
     $event.preventDefault();
    }
    $scope.send = function($event){
-	   var Json = {
+	   var Json = JSON.stringify({
 			"question" : $scope.poll.question,
 			"author" : $scope.poll.author,
 			"answers" : $scope.allAnswers
-	   };
-	   console.log(Json);
+	   });
+     $http({
+      method:'POST',
+      url: 'resources/create_question.php',
+      data: Json,
+      headers : {'Content-Type': 'application/x-www-form-urlencoded'}
+     })
+     .success(function(res){
+      console.log(res);
+     })
+     .error(function(error){
+      console.log(error);
+     })
+	   
    }
    
 }]);
