@@ -34,6 +34,10 @@
         <li ng-class="navClass('polls')"><a href="" ng-click="loadPolls()">Polls</a></li>
         <li ng-class="navClass('about')"><a href="" ng-click="loadAbout()">About Us</a></li>
       </ul>
+      <div class="nav navbar-nav navbar-right">
+        <div ng-app="directive.g+signin">
+  <google-plus-signin clientid="664781527640"></google-plus-signin></div>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
@@ -43,6 +47,9 @@
   <div ng-view=""></div>
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="polls.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="google-plus-signin.js"></script>
 
 </body>
 
