@@ -1,4 +1,4 @@
-var app = angular.module("octo-poll", ['directive.g+signin']).
+var app = angular.module("octo-poll", []).
   config(function ($routeProvider, $locationProvider, $httpProvider) {
 
     $routeProvider.when('/home',
@@ -42,13 +42,6 @@ app.controller('NavCtrl',
       $scope.loadPolls = function () {
         $location.url('/polls');
     };
-
-    $scope.$on('event:google-plus-signin-success', function (event,authResult) {
-    // Send login to server or save into cookie
-  });
-  $scope.$on('event:google-plus-signin-failure', function (event,authResult) {
-    // Auth failure or signout detected
-  });
     
 }]);
 
