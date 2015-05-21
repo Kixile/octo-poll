@@ -1,2 +1,9 @@
 /* Styles go here */
-
+.form-control {
+	display: inline !important
+}
+.img {
+	margin: 0 auto;
+	display: block;
+	
+}

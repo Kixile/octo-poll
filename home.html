@@ -11,7 +11,7 @@
                     <ul>
                     <li ng-repeat="answer in allAnswers">
                     <fieldset class="form-group">
-                        <input ng-model="answer.value" type="text" class="form-control" placeholder="Answer {{answer.id}}" title="Option {{answer.id}}"  style="display:inline" ng-keypress="keypressHandler($event,{{answer.id}})">
+                        <input ng-model="answer.value" type="text" class="form-control" placeholder="Answer {{answer.id}}" title="Option {{answer.id}}"   ng-keypress="keypressHandler($event,{{answer.id}})">
                     </fieldset>
 
                     </li>
