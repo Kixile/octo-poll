@@ -11,7 +11,6 @@ $out = array();
 # Add all to a array
 while ($row = pg_fetch_row($result)) { 
 	$answers_data = pg_query($pg_conn, "SELECT * FROM answers WHERE questions_id=" . (string)$row[0]);
-	pg_close ($pg_conn);
 	$answers = array();
 	# Add all answers to a array
 	while ($row2 = pg_fetch_row($answers_data)) { 
