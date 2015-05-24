@@ -3,25 +3,24 @@ var app = angular.module("octo-poll", []).
 
     $routeProvider.when('/home',
     {
-      templateUrl:    'home.html',
-      controller:     'HomeCtrl'
+      templateUrl:    'home.html'
     });
     $routeProvider.when('/about',
     {
-      templateUrl:    'about.html',
-      controller:     'AboutCtrl'
+      templateUrl:    'about.html'
     });
     $routeProvider.when('/polls',
     {
-      templateUrl:    'polls.html',
-      controller:     'PollsCtrl'
+      templateUrl:    'polls.html'
     });
+    $routeProvider.when('/polls/:id', {
+    	templateUrl:    'PollDetails.html',
+      controller:     'PollIdController',
+    	});    
     $routeProvider.otherwise(
     {
-      redirectTo:     '/home',
-      controller:     'HomeCtrl', 
-    }
-  );
+      redirectTo:     '/home'
+    });
 });
 
 app.controller('NavCtrl', 
@@ -45,20 +44,6 @@ app.controller('NavCtrl',
     
 }]);
 
-app.controller('AboutCtrl', function($scope, $compile) {
-  console.log('inside about controller');
-
-});
-
-app.controller('HomeCtrl', function($scope, $compile) {
-  console.log('inside home controller');
-
-});
-
-app.controller('PollsCtrl', function($scope, $compile) {
-  console.log('inside poll controller');
-
-});
 
 app.controller('pollsJsonCtrl', ['$scope', 'polls', function($scope, polls) {
   polls.success(function(data) {

@@ -1,0 +1,10 @@
+<div class="pollDetails">
+  <div class="pollContainer">
+    <h2 class="poll-question"> {{ detail.question }} </h2>
+    <p class="poll-author"> {{ detail.owner }} </p>
+    <p ng-repeat="answer in detail.answers">
+      {{ answer.answer }} - {{ answer.count | number }}
+    </p>
+
+  </div>
+</div>
