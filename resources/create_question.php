@@ -33,21 +33,20 @@ $sql_questions = "INSERT INTO questions (users_id,question, description, multiop
     . $multioption . "', '"
     . $other . "');";
 
-$sql_answers = "INSERT INTO answers (questions_id, answer ) VALUES";
-
 pg_query($pg_conn,$sql_questions);
 
-
+$question_id = pg_fetch_row(pg_query($pg_conn,"SELECT LASTVAL();"))[0];
 # answers sql creation
 $answers_list = $obj->answers;
 $sql_answers = "INSERT INTO answers (questions_id, answer ) VALUES";
 foreach($answers_list as $line){
     if(!empty($line)){
-        $sql_answers .= "(". $question_id .", '". $line->value ."'),";
+        $sql_answers .= "(". $question_id .", '". $line->value ."'),";	
     } else {
         break;
     }
 }
 $sql_answers = rtrim($sql_answers, ",");
-
+pg_query($pg_conn,$sql_answers);
+pg_close ($pg_conn);
 ?>
