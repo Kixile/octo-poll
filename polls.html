@@ -4,7 +4,7 @@
 <section class="panel" ng-controller="pollsJsonCtrl">
 	  <ul>
 		<li ng-repeat="poll in allPolls.polls">
-			<a href="#/polls/{{poll.id | number}}">
+			<a href="#/polls/{{$index}}">
 		  {{poll.question}} - <em>{{poll.owner}}</em>
 		  </a>
 		</li>
